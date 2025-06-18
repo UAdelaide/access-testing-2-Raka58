@@ -16,11 +16,11 @@ router.get('/items', async (req, res) => {
 });
 
 router.post('/messages', async (req, res) => {
-    const { bookID, sellerID, message } = req.body;
+    const { listingID, sellerID, message } = req.body;
     await db.query(`
         INSERT INTO Messages (sender_id, receiver_id, listing_id, message_text, sent_at)
         VALUES (?, ?, ?, ?, NOW())
-        `, [CURRENT_BUYER_ID, CURRENT_SELLER_ID, bookID, message]);
+        `, [CURRENT_BUYER_ID, CURRENT_SELLER_ID, listingID, message]);
         res.status(201).json({ message: 'message sent!' });
 });
 
