@@ -16,7 +16,10 @@ router.get('/items', async (req, res) => {
 });
 
 router.post('/messages', async (req, res) => {
-    const { bookID
+    const { bookID, message } = req.body;
+    await db.query(`
+
+        `)
 })
 
 module.exports = router;
