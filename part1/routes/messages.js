@@ -15,7 +15,9 @@ router.get('/items', async (req, res) => {
 });
 
 router.get('/messages', async (req, res) => {
-    
+    const [rows] = await db.query(`
+
+        `)
 });
 
 router.post('/messages', async (req, res) => {
