@@ -18,7 +18,7 @@ router.get('/messages', async (req, res) => {
     const [rows] = await db.query(`
         SELECT m.message_text, m.sent_at, b.title, u.name AS buyer_name
         FROM Messages m
-        JOIN Listings ON 
+        JOIN Listings l ON m.listing_id = l.listing_id
         `);
 });
 
