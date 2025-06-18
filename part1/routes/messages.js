@@ -24,7 +24,7 @@ router.get('/messages', async (req, res) => {
         WHERE m.receiver_id = ?
         ORDER BY m.sent_at DESC
         `, [CURRENT_BUYER_ID]);
-        res.json(rows)
+        res.json(rows);
 });
 
 router.post('/messages', async (req, res) => {
