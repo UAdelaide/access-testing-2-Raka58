@@ -13,9 +13,9 @@
 <div id="app">
     <h1>Contact Seller</h1>
 
-    <select v-model="selectedListingID">
+    <select v-model="selectedListing">
         <option disabled value="">-- Select a Book --</option>
-        <option v-for="item in items" :value="item.listing_id">
+        <option v-for="item in items" :value="item">
             {{ item.title }} (Seller: {{ item.seller_name }})
         </option>
     </select>
