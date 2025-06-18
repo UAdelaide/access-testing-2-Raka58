@@ -27,7 +27,7 @@
     <h2>Messages Received</h2>
     <ul>
         <li v-for="msg in messages">
-            <strong>{{ msg.buyerName }}</strong> about <em>{{ msg.title }}</em><br>
+            <strong>{{ msg.buyer_name }}</strong> about <em>{{ msg.title }}</em><br>
             {{ msg.messageText }} <small>({{ msg.sentAt }})</small>
         </li>
     </ul>
