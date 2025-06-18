@@ -3,7 +3,6 @@ var router = express.Router();
 var db = require('../db');
 
 var CURRENT_BUYER_ID = 2;
-var CURRENT_SELLER_ID = 3;
 
 router.get('/items', async (req, res) => {
     const [rows] = await db.query(`
@@ -20,7 +19,7 @@ router.post('/messages', async (req, res) => {
     await db.query(`
         INSERT INTO Messages (sender_id, receiver_id, listing_id, message_text, sent_at)
         VALUES (?, ?, ?, ?, NOW())
-        `, [CURRENT_BUYER_ID, CURRENT_SELLER_ID, listingID, message]);
+        `, [CURRENT_BUYER_ID, sellerID, listingID, message]);
         res.status(201).json({ message: 'message sent!' });
 });
 
