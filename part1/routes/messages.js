@@ -10,6 +10,7 @@ router.get('/items', async (req, res) => {
         SELECT l.listing_id, b.title, u.name AS seller_name
         FROM Listings l
         JOIN Books b ON l.book_id = b.book_id
-        JOIN Users u ON l.seller_id 
-        `)
+        JOIN Users u ON l.seller_id = u.user_id
+        `);
+        res.json(rows);
 });
