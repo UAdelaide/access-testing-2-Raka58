@@ -1,8 +1,8 @@
 const mysql = require('mysql2/promise');
 
 const db = mysql.createPool({
-    socketPath: 'var'
-    host: 'localhost',
+    socketPath: 'var/run/mysqld/mysqld.sock',
+    host: '127.0',
     user: 'root',
     password: 'mypassword',
     database: 'textbook_marketplace'
