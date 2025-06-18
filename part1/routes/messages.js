@@ -20,7 +20,7 @@ router.get('/messages', async (req, res) => {
         FROM Messages m
         JOIN Listings l ON m.listing_id = l.listing_id
         JOIN Books b ON l.book_id = b.book_id
-        JOIN Users 
+        JOIN Users u ON m.sender_id = 
         `);
 });
 
