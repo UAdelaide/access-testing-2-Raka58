@@ -44,7 +44,8 @@
             };
         },
         async mounted() {
-            const itemsRes = await
+            const itemsRes = await fetch('/api/items');
+            this.items
         }
     })
 </script>
