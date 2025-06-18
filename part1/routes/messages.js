@@ -21,7 +21,8 @@ router.get('/messages', async (req, res) => {
         JOIN Listings l ON m.listing_id = l.listing_id
         JOIN Books b ON l.book_id = b.book_id
         JOIN Users u ON m.sender_id = u.user_id
-        WHERE m.
+        WHERE m.receiver_id = ?
+        ORDER BY m.sent_at DESC
         `);
 });
 
