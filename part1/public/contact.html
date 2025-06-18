@@ -52,7 +52,6 @@
         },
         methods: {
             async sendMessage(){
-                alert(this.selectedListingID + ', ' + this.messageText);
                 if (!this.selectedListingID || !this.messageText.trim()) {
                     return alert('Please select a book and enter a message.');
                 }
