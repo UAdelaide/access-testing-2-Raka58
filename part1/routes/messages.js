@@ -6,5 +6,6 @@ var CURRENT_BUYER_ID = 2;
 var CURRENT_SELLER_ID = 3;
 
 router.get('/items', async (req, res) => {
-    
-})
+    const [rows] = await db.query(`
+        `)
+});
