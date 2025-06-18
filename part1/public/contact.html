@@ -52,7 +52,7 @@
         },
         methods: {
             async sendMessage(){
-                if (!this.selectedListing.book_id || !this.messageText.trim()) {
+                if (!this.selectedListing.listing_id || !this.messageText.trim()) {
                     return alert('Please select a book and enter a message.');
                 }
                 await fetch('/api/messages', {
