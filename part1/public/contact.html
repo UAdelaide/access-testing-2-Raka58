@@ -52,7 +52,9 @@
         },
         methods: {
             async sendMessage(){
-                if (!this.selectedBookID || !this.messageText.trim())
+                if (!this.selectedBookID || !this.messageText.trim()) {
+                    return alert()
+                }
             }
         }
     })
