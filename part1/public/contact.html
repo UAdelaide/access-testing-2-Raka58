@@ -52,6 +52,7 @@
         },
         methods: {
             async sendMessage(){
+                alert(this.selectedBookID, this.messageText);
                 if (!this.selectedBookID || !this.messageText.trim()) {
                     return alert('Please select a book and enter a message.');
                 }
